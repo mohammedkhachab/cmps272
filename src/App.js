@@ -2,7 +2,8 @@ import "./App.css";
 import Footer from "./Component/Footer";
 import Header from "./Component/Header";
 import Home from "./Component/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SearchPage from "./Component/SearchPage";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +11,14 @@ function App() {
       <Router>
         <Header />
 
-        <Home />
+        <Switch>
+          <Route path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
 
         <Footer />
       </Router>
@@ -19,3 +27,4 @@ function App() {
 }
 
 export default App;
+  
