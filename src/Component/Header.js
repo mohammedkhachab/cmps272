@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      {/* <Link to="/"> */}
-        <img
-          className="header__icon"
-          src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-          alt=""
-        />
-      {/* </Link> */}
+      <Link to="/">
+      <img
+        className="header__icon"
+        src="./alternatedocroots/fb0cb59e-fe83-4342-b24b-5515377c9206-VISITLEBANON.png"
+        alt=""
+      />
+      </Link>
 
       <div className="header__center">
         <input type="text" />
