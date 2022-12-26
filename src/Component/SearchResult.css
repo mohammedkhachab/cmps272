@@ -5,11 +5,7 @@
     padding: 20px;
     border-bottom: 1px solid lightgray;
     cursor: pointer;
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> fbf5161330387ee9e44f8e3bff9550c0c77d4b33
 
 .searchResult:hover {
     opacity: 0.8;
@@ -48,13 +44,8 @@
     margin-top: 10px;
     font-size: 13px;
     color: gray;
-<<<<<<< HEAD
 }
 
-=======
-  }
-  
->>>>>>> fbf5161330387ee9e44f8e3bff9550c0c77d4b33
 .searchResult__infoBottom {
     display: flex;
     justify-content: space-between;
@@ -73,21 +64,10 @@
 
 .searchResults__price > p {
     text-align: right;
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> fbf5161330387ee9e44f8e3bff9550c0c77d4b33
 
 .searchResults__price {
     position: absolute;
     bottom: 20px;
     right: 30px;
 }
-<<<<<<< HEAD
-=======
-
-
-
-  
->>>>>>> fbf5161330387ee9e44f8e3bff9550c0c77d4b33
