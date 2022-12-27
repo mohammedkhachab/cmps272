@@ -9,6 +9,7 @@ function Home() {
   return (
     <div className="home">
       <Banner />
+      <h1>Tourist Places</h1>
       <div className="home__section">
         <Card
           src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
@@ -26,6 +27,8 @@ function Home() {
           description="Comfortable private places, with room for friends or family."
         />
       </div>
+      <br />
+      <h1>Local Market</h1>
       <div className="home__section">
         <Card
           src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"

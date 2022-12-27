@@ -4,7 +4,6 @@ import Home from "./Component/Home";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import SearchPage from "./Component/SearchPage";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
     <div className="app">
       <Router>
         <Header />
-
         <Switch>
           <Route path="/search">
             <SearchPage />
@@ -22,7 +20,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-
         <Footer />
       </Router>
     </div>
