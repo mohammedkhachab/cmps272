@@ -19,8 +19,9 @@ function Header() {
       </div>
 
       <div className="header__right">
-        <p>Local Market</p>
-        <LanguageIcon />
+        <Link to="/productpage">
+          <p className="local__Market">Local Market</p>
+        </Link>
         <ExpandMoreIcon />
         <Avatar />
       </div>

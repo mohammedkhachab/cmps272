@@ -40,3 +40,15 @@
     width: 15vw;
     margin-right: 80px;
 }
+
+.local__Market {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #ff7779 !important;
+    transition: all .2s ease-in-out;
+}
+
+.local__Market:hover {
+    transform: scale(1.1);
+}
