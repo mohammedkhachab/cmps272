@@ -6,13 +6,11 @@ import Footer from "./Component/Footer";
 import SearchPage from "./Component/SearchPage";
 import Productpage from "./Component/ProductPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Register from "./Component/Register";
 
 function App() {
   return (
     // BEM
     <div className="app">
-     
       <Router>
         <Header />
         <Switch>
@@ -21,13 +19,13 @@ function App() {
           </Route>
           <Route path="/">
             <Home />
-          </Route> 
+          </Route>
           {/* <Route path="/productpage" component={Productpage}>
             <Productpage />
         </Route> */}
-         </Switch>
+        </Switch>
         <Footer />
-      </Router> 
+      </Router>
     </div>
   );
 }
