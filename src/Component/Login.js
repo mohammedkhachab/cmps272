@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { useHistory } from 'react-router-dom';
 
 function Login(props) {
+	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
 
@@ -32,7 +34,9 @@ function Login(props) {
 					id='password'
 					name='password'
 				/>
-				<button type='submit'>Log In</button>
+				<button type='submit' onClick={() => history.push('/')}>
+					Log In
+				</button>
 			</form>
 			<button
 				className='link-btn'

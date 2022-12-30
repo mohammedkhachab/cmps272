@@ -52,3 +52,7 @@
 .local__Market:hover {
     transform: scale(1.1);
 }
+
+.avatar {
+    cursor: pointer;
+}
