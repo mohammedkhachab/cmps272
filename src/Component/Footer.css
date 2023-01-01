@@ -2,10 +2,37 @@
     border-top: 1px solid lightgray;
     padding: 20px;
     background-color: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.f1 {
     text-align: center;
 }
-
+.f2 {
+    text-align: center;
+}
 .footer > p {
     padding: 5px;
     font-size: 14px;
+}
+
+.instagramIcon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.facebookicon {
+    padding: 5px;    
+    cursor: pointer;
+}
+
+.twitterIcon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.privacy {
+    padding-top: 5px;
+    cursor : pointer;
 }
