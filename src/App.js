@@ -6,6 +6,7 @@ import Footer from './Component/Footer';
 import SearchPage from './Component/SearchPage';
 import ProductPage from './Component/ProductPage';
 import Login from './Component/Login';
+import Register from './Component/Register';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AboutUs from './Component/AboutUs';
 import History from './Component/History';
@@ -15,8 +16,6 @@ function App() {
 	return (
 		// BEM
 		<div className='app'>
-			{/* <Register />
-			<Login/> */}
 			<Router>
 				<Header />
 				<Switch>
@@ -40,6 +39,9 @@ function App() {
 					</Route>{' '}
 					<Route path='/login' component={Login}>
 						<Login />
+					</Route>
+					<Route path='/register' component={Register}>
+						<Register />
 					</Route>
 				</Switch>
 				<Footer />

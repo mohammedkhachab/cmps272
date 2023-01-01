@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Register.css';
+import { useHistory } from 'react-router-dom';
 
 function Register(props) {
+	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
 	const [name, setName] = useState('');
@@ -43,9 +45,11 @@ function Register(props) {
 				/>
 				<button type='submit'>Sign up</button>
 			</form>
-			<button className='link-btn' onClick={() => props.onFormSwitch('login')}>
+			<button className='link-btn' onClick={() => history.push('/login')}>
 				Already have an account? Login here.
 			</button>
+
+			{/* onClick={() => props.onFormSwitch('login')} */}
 		</div>
 	);
 }

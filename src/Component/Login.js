@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Login(props) {
 	const history = useHistory();
@@ -38,12 +40,14 @@ function Login(props) {
 					Log In
 				</button>
 			</form>
-			<button
-				className='link-btn'
-				onClick={() => props.onFormSwitch('register')}
-			>
-				Don't have an account? Register here.
-			</button>
+			<Link className='link' to='/register'>
+				<button
+					className='link-btn'
+					onClick={() => props.onFormSwitch('register')}
+				>
+					Don't have an account? Register here.
+				</button>
+			</Link>
 		</div>
 	);
 }
