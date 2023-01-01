@@ -7,7 +7,10 @@ import SearchPage from './Component/SearchPage';
 import ProductPage from './Component/ProductPage';
 import Login from './Component/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Register from './Component/Register';
+import AboutUs from './Component/AboutUs';
+import History from './Component/History';
+import ContactUs from './Component/ContactUs';
+
 function App() {
 	return (
 		// BEM
@@ -20,14 +23,23 @@ function App() {
 					<Route path='/search'>
 						<SearchPage />
 					</Route>
-					<Route path='/'>
+					<Route exact path='/'>
 						<Home />
 					</Route>
-					<Route path='/login'>
-						<Login />
+					<Route path='/aboutus' component={AboutUs}>
+						<AboutUs />
 					</Route>
-					<Route path='/productpage'>
+					<Route path='/history' component={History}>
+						<History />
+					</Route>
+					<Route path='/contactus' component={ContactUs}>
+						<ContactUs />
+					</Route>
+					<Route path='/productpage' component={ProductPage}>
 						<ProductPage />
+					</Route>{' '}
+					<Route path='/login' component={Login}>
+						<Login />
 					</Route>
 				</Switch>
 				<Footer />
