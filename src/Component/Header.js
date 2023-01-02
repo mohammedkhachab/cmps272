@@ -4,10 +4,8 @@ import SearchIcon from '@material-ui/icons/Search';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Avatar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 
 function Header() {
-	const history = useHistory();
 	return (
 		<div className='header'>
 			<Link to='/'>
