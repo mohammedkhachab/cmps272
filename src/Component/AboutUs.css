@@ -1,0 +1,17 @@
+.aboutus {
+    color: lightblue;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+
+}
+
+.desc {
+    color: lightblue;
+}

@@ -46,6 +46,7 @@ function App() {
 				</Switch>
 				<Footer />
 			</Router>
+			{/* <AboutUs /> */}
 		</div>
 	);
 }
