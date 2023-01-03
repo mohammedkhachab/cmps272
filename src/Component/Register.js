@@ -1,22 +1,34 @@
 import React, { useState } from 'react';
 import './Register.css';
 import { useHistory } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../Firebase/Firebase';
 
 function Register(props) {
 	const history = useHistory();
+	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
-	const [name, setName] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(email);
 	};
 
+	const Signup = (e) => {
+		signInWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				console.log(userCredential);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
+
 	return (
 		<div className='auth-form-container'>
 			<h2>Register</h2>
-			<form className='register-form' onSubmit={handleSubmit}>
+			<form className='register-form' onSubmit={Signup}>
 				<label htmlFor='name'>Full name</label>
 				<input
 					value={name}
@@ -39,11 +51,13 @@ function Register(props) {
 					value={pass}
 					onChange={(e) => setPass(e.target.value)}
 					type='password'
-					placeholder='****'
+					placeholder=' ****** '
 					id='password'
 					name='password'
 				/>
-				<button type='submit'>Sign up</button>
+				<button type='submit' onClick={() => history.push('/login')}>
+					Sign up
+				</button>
 			</form>
 			<button className='link-btn' onClick={() => history.push('/login')}>
 				Already have an account? Login here.

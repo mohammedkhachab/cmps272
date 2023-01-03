@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { useHistory } from 'react-router-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { auth } from '../Firebase/Firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login(props) {
 	const history = useHistory();
@@ -14,17 +15,27 @@ function Login(props) {
 		console.log(email);
 	};
 
+	const Signin = (e) => {
+		signInWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				console.log(userCredential);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
+
 	return (
 		<div className='auth-form-container'>
 			<h2>Login</h2>
-			<form className='login-form' onSubmit={handleSubmit}>
+			<form className='login-form' onSubmit={Signin}>
 				<label htmlFor='email'>email</label>
 				<input
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 					type='email'
 					placeholder='youremail@gmail.com'
-					id='email'
+					className='email'
 					name='email'
 				/>
 				<label htmlFor='password'>password</label>
@@ -33,7 +44,7 @@ function Login(props) {
 					onChange={(e) => setPass(e.target.value)}
 					type='password'
 					placeholder='****'
-					id='password'
+					className='password'
 					name='password'
 				/>
 				<button type='submit' onClick={() => history.push('/')}>
